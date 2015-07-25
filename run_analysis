@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# Run script for Getting and Cleaning Data course project.
+#
+# Must be from the directory containing the source (.R) files
+Rscript run_analysis.R
