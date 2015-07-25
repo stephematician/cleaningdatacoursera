@@ -10,7 +10,7 @@ source('download_UCI_data.R')
 source('process_UCI_data.R')
 
 tidy_file <- './output/UCI_HAR_ms_tidy.txt'
-summary_file <- './output/USI_HAR_ms_summary.txt'
+summary_file <- './output/UCI_HAR_ms_summary.txt'
 
 if (!file.exists('output')) {
     dir.create('output')
