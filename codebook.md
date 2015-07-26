@@ -80,32 +80,32 @@ The following attributes (columns) in the both datasets are:
 
   * `id` - the volunteer id (1-30)
   * `activity` - the activity, in quotes, can be one of `"walking"`,
-  `"walking upstairs"`, `"walking downstairs"`, `"sitting"`, `"standing"` and
+  `"walkingupstairs"`, `"walkingdownstairs"`, `"sitting"`, `"standing"` and
     `"laying"`
-  * `tBodyAcc` `-mean()` and `-std()`, with `-X`, `-Y` and `-Z` components
-  * `tGravityAcc` `-mean()` and `-std()`, with `-X`, `-Y` and `-Z` components
-  * `tBodyAccJerk` `-mean()` and `-std()`, with `-X`, `-Y` and `-Z` components
-  * `tBodyGyro` `-mean()` and `-std()`, with `-X`, `-Y` and `-Z` components
-  * `tBodyGyroJerk` `-mean()` and `-std()`, with `-X`, `-Y` and `-Z` components
-  * `tBodyAccMag` `-mean()` and `-std()`
-  * `tGravityAccMag` `-mean()` and `-std()`
-  * `tBodyAccJerkMag` `-mean()` and `-std()`
-  * `tBodyGyroMag` `-mean()` and `-std()`
-  * `tBodyGyroJerkMag` `-mean()` and `-std()`
-  * `fBodyAcc` `-mean()` and `-std()`, with `-X`, `-Y` and `-Z` components
-  * `fBodyAccJerk` `-mean()` and `-std()`, with `-X`, `-Y` and `-Z` components
-  * `fBodyGyro` `-mean()` and `-std()`, with `-X`, `-Y` and `-Z` components
-  * `fBodyAccMag` `-mean()` and `-std()`
-  * `fGravityAccMag` `-mean()` and `-std()`
-  * `fBodyAccJerkMag` `-mean()` and `-std()`
-  * `fBodyGyroMag` `-mean()` and `-std()`
-  * `fBodyGyroJerkMag` `-mean()` and `-std()`
+  * `tbodyacc` `mean` and `-td`, with `x`, `y` and `z` components
+  * `tgravityacc` `mean` and `std`, with `x`, `y` and `z` components
+  * `tbodyaccjerk` `mean` and `std`, with `x`, `y` and `z` components
+  * `tbodygyro` `mean` and `std`, with `x`, `y` and `z` components
+  * `tbodygyrojerk` `mean` and `std`, with `x`, `y` and `z` components
+  * `tbodyaccmag` `mean` and `std`
+  * `tgravityaccmag` `mean` and `std`
+  * `tbodyaccjerkmag` `mean` and `std`
+  * `tbodygyromag` `mean` and `std`
+  * `tbodygyrojerkmag` `mean` and `std`
+  * `fbodyacc` `mean` and `std`, with `x`, `y` and `z` components
+  * `fbodyaccjerk` `mean` and `std`, with `x`, `y` and `z` components
+  * `fbodygyro` `mean` and `-td`, with `x`, `y` and `z` components
+  * `fbodyaccmag` `mean` and `std`
+  * `fgravityaccMag` `mean` and `std`
+  * `fbodyaccjerkmag` `mean` and `std`
+  * `fbodygyromag` `mean` and `std`
+  * `fbodygyrojerkmag` `mean` and `std`
 
 The general naming schema is that `t` stands for time domain, and `f` stands for
-Fourier/frequency domain. The `-mean()` and `-std()` indicate mean and standard
-devations of the signal and `-X`, `-Y` and `-Z` represent the axis of the
-measurement. So `fBodyAcc-mean()-Y` would be the mean of the body acceleration
-along the y axis in the frequency domain.
+Fourier/frequency domain. The `mean` and `-std` suffix indicate mean and
+standard devations of the signal and `x`, `y` and `z` final suffix represent the
+axis of the measurement. So `fbodyaccmeany` would be the mean of the body
+acceleration along the y axis in the frequency domain.
 
 The dimensions (i.e. units) of the variables is not clear, as each is an
 aggregate of different physical measurements, and the feature vectors themselves

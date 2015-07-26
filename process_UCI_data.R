@@ -35,11 +35,11 @@ UCI_get_features <- function() {
     feature_table <- subset(feature_table,
                             (grepl("mean\\(\\)", V2) |
                              grepl("std\\(\\)", V2)))
-    # clean up a few names
-    err_names <- which(grepl("BodyBody", feature_table$V2))
-    for (i in err_names) {
-        feature_table$V2[i] <- gsub("BodyBody", "Body", feature_table$V2[i])
-    }
+    # clean up variable names
+    feature_table$V2 <- gsub("\\(\\)","", feature_table$V2)
+    feature_table$V2 <- gsub("-","", feature_table$V2)
+    feature_table$V2 <- tolower(feature_table$V2)
+    feature_table$V2 <- gsub("bodybody", "body", feature_table$V2)
     return(feature_table)
 }
 
@@ -53,7 +53,7 @@ UCI_activity_as_factor <- function(uci_table) {
     
     activity_table$V2 <- sapply(activity_table$V2, tolower)
     activity_table$V2 <- sapply(activity_table$V2,
-                                function(x){gsub(pattern = '_', replacement = ' ', x)})
+                                function(x){gsub(pattern = '_', replacement = '', x)})
     
     with_acts <- merge(uci_table,
                        activity_table,

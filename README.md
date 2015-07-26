@@ -30,5 +30,5 @@ both are generated using the `write.table()` function in R.
 into a tidy datasets (ready for merging/summary), is invoked by `run_analysis.R`
 
 The MD5 sums of the output files (for verification of procedure) are
-  * `UCI_HAR_ms_tidy.txt` 71967342fd58cf33a1362c9b6c495d29
-  * `UCI_HAR_ms_summary.txt` 56195ae4e50b6b38638b21786b86ae95
+  * `UCI_HAR_ms_tidy.txt` 858320ed6cd349fb51b49e837a5bbe93
+  * `UCI_HAR_ms_summary.txt` 2d1141575bef34b7d85b1065c49f521e
