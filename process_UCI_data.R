@@ -33,9 +33,8 @@ UCI_get_features <- function() {
     feature_table <- read.table(feature_file, stringsAsFactors=FALSE)
     
     feature_table <- subset(feature_table,
-                            (grepl("mean()", V2) |
-                             grepl("std()", V2)) &
-                            !grepl("meanFreq", V2))
+                            (grepl("mean\\(\\)", V2) |
+                             grepl("std\\(\\)", V2)))
     # clean up a few names
     err_names <- which(grepl("BodyBody", feature_table$V2))
     for (i in err_names) {
