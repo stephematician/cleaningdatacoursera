@@ -54,11 +54,10 @@ UCI_activity_as_factor <- function(uci_table) {
     activity_table$V2 <- sapply(activity_table$V2, tolower)
     activity_table$V2 <- sapply(activity_table$V2,
                                 function(x){gsub(pattern = '_', replacement = '', x)})
-    
-    with_acts <- merge(uci_table,
-                       activity_table,
-                       by.x = 'V1',
-                       by.y = 'V1')
+    with_acts <- left_join(uci_table,
+                           activity_table,
+                           by = c('V1','V1'))
+
     # remove the old columns
     with_acts_tidy <- select(with_acts,-V1, activity=V2)
     with_acts_tidy$activity <- as.factor(with_acts_tidy$activity)
